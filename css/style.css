@@ -1,0 +1,896 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/** FONTS **/
+
+@font-face {
+    font-family: "muller";
+    src: url('../fonts/muller.eot');
+    src: local('☺'), url('../fonts/muller.woff') format('woff'), url('../fonts/muller.TTF') format('truetype'), url('../fonts/muller.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "montserrat-reg";
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: local('☺'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.TTF') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "muller";
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: local('☺'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.TTF') format('truetype'), url('../fonts/Montserrat-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/**GET THE ROBOTO FONT **/
+
+
+/** FOUNDATION + HEADER**/
+
+body {
+    margin:0 auto;
+    width: 1024px;
+    overflow-x: hidden;
+}
+
+#main {
+    height: 4000px;
+    width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 60;
+    position: relative;
+    height: 3700px;
+}
+
+header {
+    height: 385px;
+    background-color: white;
+    position: relative;
+}
+
+#logo {
+    display: inline-block;
+    float: left;
+    margin-right: 50px;
+}
+
+#header_image {
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header_image>img {
+    z-index: 20;
+}
+
+header nav {
+    position: relative;
+    margin-top: 35px;
+    float: left;
+    z-index: 30;
+}
+
+header nav>ul {
+    list-style: none;
+}
+
+header nav>ul>li {
+    float: left;
+    margin-right: 50px;
+}
+
+header nav>ul>li>a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-family: muller;
+}
+
+header nav>ul>li:last-child>a,
+header nav>ul>li:nth-child(3)>a,
+header nav>ul>li:nth-child(4)>a {
+    color: white;
+}
+
+
+header>p,
+header>h1,
+header>a {
+    display: block;
+    clear: both;
+    margin-left: 190px;
+}
+
+header>p {
+    font-family: Montserrat-regular;
+    font-size: 12px;
+}
+
+header>h1 {
+    margin-top: 20px;
+    font-family: Montserrat-bold;
+    position: relative;
+    letter-spacing: 8px;
+    width: 420px;
+    font-size: 25px;
+    z-index: 40;
+}
+
+header>a {
+    font-family: montserrat-regular;
+    margin-top: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #cc9966;
+    width: 144px;
+    text-align: right;
+}
+
+/** HOVER ON MENU>LI (JS) **/
+#linemenu{
+    width:20px;
+    height:5px;
+    border-top:1px solid #cc9966;
+    position: absolute;
+    left:-25px;
+    top:5px;
+}
+#dotmenu{
+    position: absolute;
+    height:3px;
+    width:3px;
+    border-radius: 5px;
+    background-color: #cc9966;
+    top:5px;
+    left:62px;
+}
+
+/**ANCHOR MENU **/
+
+#main {
+    position: relative;
+}
+
+#anchors {
+    width: 45px;
+    height: 300px;
+    z-index: 60;
+    left: 40px;
+    top: 100px;
+    background-color: white;
+    border-radius: 13px;
+    position: fixed;
+}
+
+#arrowup {
+    height: 7px;
+    width: 13px;
+    background-image: url(../images/header/arrowup.png);
+    transition: all ease 0.5s;
+    margin: 20px auto 20px;
+}
+
+#arrowup:hover {
+    cursor: pointer;
+    background-image: url(../images/header/arrowupB.png);
+}
+
+#arrowdown {
+    height: 7px;
+    width: 13px;
+    background-image: url(../images/header/arrowdown.png);
+    transition: all ease 0.5s;
+    margin: 0 auto 20px;
+}
+
+#arrowdown:hover {
+    cursor: pointer;
+    background-image: url(../images/header/arrowdownB.png);
+}
+
+#lineanchor {
+    border-left: 1px solid #cc9966;
+    width: 22.5px;
+    height: 20px;
+    margin: 0 0 20px 22.5px;
+}
+
+#anchors ul {
+    list-style: none;
+}
+
+#anchors li {}
+
+#anchors a {
+    width: 45px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #999;
+    font-family: Montserrat-bold;
+    font-size: 9.5px;
+    right: 95%;
+    transition: all ease 0.5s;
+}
+
+.activeanchor,
+#anchors a:hover {
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 40px !important;
+    line-height: 40px !important;
+    text-align: center !important;
+    font-size: 21.5px !important;
+    background-color: white !important;
+    box-shadow: 1px 3px 5px lightgrey !important;
+    margin-bottom: 20px !important;
+    margin-left: 2.5px !important;
+}
+/** END ANCHOR MENU**/
+
+/** END FOUNDATION+HEADER**/
+
+
+/** ON TO THE CONTENT **/
+
+
+/** DAYPACK SECTION **/
+
+#daypack {
+    height: 870px;
+    margin-top: 105px;
+    position: relative;
+}
+
+#daypack_img {
+    background-image: url(../images/content/daypack/daypack.jpg);
+    height: 309px;
+    float: left;
+    width: 690px;
+    position: relative;
+    margin-bottom: 130px;
+    left: -1500px;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+#daypack_img>h2,
+#daypack_img>p {
+    position: relative;
+    float: right;
+    clear: both;
+    margin-right: 10px;
+    z-index: 40;
+}
+
+#daypack_img>h2 {
+    font-family: Montserrat-bold;
+    letter-spacing: 8px;
+    color: white;
+    width: 377px;
+    font-size: 25px;
+    margin-top: 120px;
+}
+
+#daypack_img>p {
+    font-family: Montserrat-regular;
+    color: white;
+    width: 380px;
+    width: 130px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.goldbox {
+    width: 470px;
+    height: 165px;
+    position: absolute;
+    border: #cc9966 6px solid;
+}
+
+#goldbox1 {
+    right: -1078px;
+    top: 60px;
+    z-index: 30;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+#goldbox1>p {
+    float: right;
+    display: block;
+    font-family: Montserrat-regular;
+    font-size: 8px;
+    width: 170px;
+    color: #999999;
+    line-height: 15px;
+    text-align: left;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+}
+
+.arrow {
+    width: 105px;
+    height: 51px;
+    background-image: url(../images/content/daypack/down_arrow_t.jpg);
+    position: absolute;
+}
+
+#arrow1 {
+    bottom: -51px;
+    right: 80px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#gallery {
+    clear: both;
+    height: 300px;
+    width: 100%;
+    background-color: red;
+}
+
+
+/** END OF DAYPACK SECTION **/
+
+
+/** DRIFTER BACK **/
+
+#Drifter {
+    position: relative;
+    background-color: #ededed;
+    height: 860px;
+}
+
+#drifter_img {
+    background-image: url(../images/content/drifter/drifter.jpg);
+    height: 309px;
+    float: right;
+    width: 690px;
+    position: relative;
+    margin-bottom: 130px;
+    margin-top: 100px;
+    right: -1000px;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+#drifter_img>h2,
+#drifter_img>p {
+    position: relative;
+    z-index: 60;
+}
+
+#drifter_img>h2 {
+    font-family: Montserrat-bold;
+    letter-spacing: 6.5px;
+    color: white;
+    width: 377px;
+    font-size: 25px;
+    margin-top: 120px;
+    margin-left: 45px;
+}
+
+#drifter_img>p {
+    font-family: Montserrat-regular;
+    color: white;
+    width: 380px;
+    width: 130px;
+    font-size: 11px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+#goldbox2 {
+    left: -1078px;
+    top: 160px;
+    position: relative;
+    z-index: 50;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+#goldbox2>h3 {
+    font-family: Montserrat-bold;
+    letter-spacing: 10px;
+    color: grey;
+    position: relative;
+    bottom: 20px;
+    height: 14px;
+    overflow: hidden;
+}
+
+#goldbox2>p {
+    float: left;
+    display: block;
+    font-family: Montserrat-regular;
+    font-size: 8px;
+    width: 210px;
+    color: #999999;
+    line-height: 20px;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+#arrow2 {
+    bottom: -51px;
+    left: 80px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+
+/** END DRIFTER SECTION **/
+
+
+/** TANNER COLLECTIONS **/
+
+#TannerCollections {
+    height: 1320px;
+    position: relative;
+    padding: 0 72px;
+    opacity:0;
+    transition: all ease 2s;
+}
+
+#TannerCollections h2 {
+    font-family: Montserrat-bold;
+    font-size: 32px;
+    letter-spacing: 5px;
+    margin: 90px 0 15px 50px;
+}
+
+#TannerCollections>p {
+    font-family: Montserrat-regular;
+    font-size: 12px;
+    color: #333333;
+    width: 300px;
+    height: 15px;
+    background-color: #e1d9c9;
+    margin-bottom: 70px;
+    margin-left: 400px;
+}
+
+
+/** FIRST BLOCK**/
+
+#product1 {
+    height: 510px;
+    width: 510px;
+    background-color: white;
+    position: relative;
+    float: left;
+}
+
+.number {
+    width: 100%;
+    font-family: Montserrat-bold;
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: #cccccc;
+    display: inline-block;
+}
+
+#product1 img {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 70px;
+}
+
+#product1 img:nth-child(2) {
+    margin-left: 25px;
+}
+
+#product1text {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    width: 290px;
+    height: 80px;
+}
+
+#beigeblock {
+    height: 15px;
+    background-color: #e1d9c9;
+    position: relative;
+    top: -10px;
+}
+
+#product1text h4 {
+    font-family: montserrat-bold;
+    font-size: 14.5px;
+    letter-spacing: 5px;
+    text-align: center;
+    z-index: 50;
+    position: relative;
+}
+
+#product1text p {
+    width: 180px;
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 8px;
+    color: #333333;
+    line-height: 12px;
+    text-align: justify;
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+
+#product1text a {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    font-family: Montserrat-bold;
+    font-size: 7px;
+    color: black;
+    width: 180px;
+    right: 0;
+}
+
+
+/** END FIRST BLOCK **/
+
+
+/** BLOCK 2 **/
+
+#product2 {
+    width: 355px;
+    position: absolute;
+    left: 485px;
+    height: 550px;
+}
+
+#product2>p {
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+}
+
+#transparentlogoborder {
+    height: 235px;
+    border-left: 2px black solid;
+    margin: 70px 0 0 150px;
+    position: relative;
+    z-index: 50;
+}
+
+#transparentlogoborder>img {
+    position: absolute;
+    bottom: 40px;
+}
+
+#product2text {
+    width: 210px;
+    height: 125px;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    background-color: white;
+    z-index: 60;
+}
+
+#product2text>h4 {
+    margin-top: 15px;
+    font-family: Montserrat-bold;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+#product2text>p {
+    margin-top: 15px;
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 8px;
+    color: #333333;
+}
+
+#product2text a {
+    position: absolute;
+    text-decoration: none;
+    font-family: Montserrat-bold;
+    font-size: 7px;
+    color: black;
+    margin-top: 20px;
+}
+
+#product2>img {
+    border: 15px white solid;
+    border-right: 0;
+    float: left;
+}
+
+#product2>img:nth-child(4) {
+    margin-left: 30px;
+    z-index: 20;
+    bottom: 50px;
+}
+
+
+/** END BLOCK 2 **/
+
+
+/** BLOCK 3 **/
+
+#BAM {
+    height: 30px;
+}
+
+#product3 {
+    clear: both;
+    position: relative;
+    height: 390px;
+    width: 650px;
+    margin: 0 auto;
+}
+
+#product3>img {
+    margin-top: 10px;
+    float: left;
+    border-left: 15px solid white;
+    position: relative;
+    z-index: 30;
+}
+
+#product3 img+img {
+    border-right: 15px solid white;
+    border-bottom: 15px solid white;
+}
+
+#product3text {
+    margin-top: 20px;
+    width: 250px;
+    height: 100px;
+    float: right;
+}
+
+#product3text>h4 {
+    font-family: Montserrat-bold;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+#product3text>p {
+    margin-top: 10px;
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 8px;
+    color: #333333;
+    text-align: justify;
+}
+
+#product3text a {
+    position: absolute;
+    text-decoration: none;
+    font-family: Montserrat-bold;
+    font-size: 7px;
+    color: black;
+    margin-top: 10px;
+}
+
+#part3 {
+    margin-top: 160px;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+#part3 h3 {
+    display: inline-block;
+    font-family: montserrat-bold;
+    font-size: 32px;
+    color: white;
+    width: 235px;
+    height: 80px;
+    letter-spacing: 12px;
+    text-shadow: 2px 7px 12px #cccccc;
+    position: absolute;
+    left: 55px;
+    top: 80px;
+    z-index: 10;
+}
+
+#part3 img {
+    position: absolute;
+    left: 270px;
+}
+
+#product3>.number {
+    width: 20px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 155px;
+}
+
+#gallery3 {
+    background-color: red;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/** FOOTER **/
+
+footer {
+    margin: 0 auto;
+    clear: both;
+    height: 120px;
+    width: 1024px;
+    background-color: #ededed;
+    position: relative;
+    bottom: 0px;
+    z-index: 10;
+}
+
+#allthefootnavs {
+    width: 610px;
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-right: 50px;
+}
+
+footer>p {
+    width: 80px;
+    float: left;
+}
+
+#allthefootnavs img {
+    float: left;
+    margin: 20px 90px 45px 50px;
+}
+
+#allthefootnavs ul {
+    list-style: none;
+}
+
+#allthefootnavs ul>li {
+    float: left;
+}
+
+#allthefootnavs a {
+    text-decoration: none;
+    font-family: muller;
+    font-size: 8px;
+    color: #999999;
+}
+
+#footernav {
+    float: right;
+    margin-top: 30px;
+}
+
+#allthefootnavs p {
+    clear: both;
+    float: left;
+}
+
+#allthefootnavs p+ul {
+    float: right;
+}
+
+#footernav>ul>li {
+    width: 55px;
+    margin-right: 20px;
+}
+
+#footernav>ul>li>a {
+    display: block;
+    width: 55px;
+    margin-right: 20px;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+#footernav>ul>li>a:hover {
+    color: black;
+}
+
+#allthefootnavs p {
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 8px;
+    color: #333333;
+    position: relative;
+    left: 50px;
+    bottom: 15px;
+}
+
+#allthefootnavs p+ul {
+    position: relative;
+    bottom: 15px;
+    width: 315px;
+    right: 25px;
+}
+
+#allthefootnavs p+ul>li>a {
+    display: block;
+    width: 55px;
+    margin-right: 20px;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+#allthefootnavs p+ul>li>a:hover {
+    color: black;
+}
+
+footer>p {
+    margin-top: 30px;
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 8px;
+    margin-right: 150px;
+}
+
+footer>p>em {
+    margin-top: 30px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+#newsletter {
+    width: 135px;
+    height: 100px;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+#newsletter>p:first-child {
+    font-family: montserrat-bold;
+    font-size: 8px;
+    display: inline-block;
+}
+
+#newsletter>p+p {
+    font-family: roboto;
+    font-weight: thin;
+    font-size: 6px;
+    display: inline-block;
+    width: 125px;
+}
+
+#newsletter input[type="email"] {
+    width: 100px;
+    float: left;
+    height:18px;
+    border:1px solid darkgrey;
+    margin-top:10px;
+}
+
+#newsletter input[type="submit"] {
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    font-family: montserrat-regular;
+    font-size: 8px;
+    border: none;
+    float: right;  
+    margin-top:10px;
+}
+
